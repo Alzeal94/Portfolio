@@ -1,0 +1,79 @@
+/* Aplicar la fuente Poppins a todo el cuerpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+/* Estilo para el color de acento vibrante (Azul Eléctrico) */
+.accent-color {
+    color: #007BFF;
+}
+.bg-accent-color {
+    background-color: #007BFF;
+}
+.border-accent-color {
+    border-color: #007BFF;
+}
+
+/* Animación de fondo sutil y abstracta */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    filter: blur(100px);
+    animation: move 25s infinite alternate ease-in-out;
+}
+
+.shape1 {
+    width: 400px;
+    height: 400px;
+    top: -10%;
+    left: -10%;
+}
+
+.shape2 {
+    width: 500px;
+    height: 500px;
+    bottom: -15%;
+    right: -15%;
+    animation-duration: 30s;
+}
+
+.shape3 {
+    width: 300px;
+    height: 300px;
+    bottom: 25%;
+    left: 20%;
+    animation-duration: 20s;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(100px, 50px) rotate(30deg);
+    }
+}
+
+/* Animación de entrada para las secciones */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
