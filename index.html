@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Zegaa Alós | Desarrollador de Aplicaciones Multiplataforma</title>
+    
+    <!-- Tailwind CSS (se mantiene aquí) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="antialiased">
+    
+    <!-- Contenedor para la animación de fondo -->
+    <div class="animated-background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Ali Zegaa Alós</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#proyectos" class="text-gray-300 hover:text-white transition-colors duration-300">Proyectos</a>
+                <a href="#stack" class="text-gray-300 hover:text-white transition-colors duration-300">Tecnologías</a>
+                <a href="#contacto" class="text-gray-300 hover:text-white transition-colors duration-300">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Hero -->
+        <section id="home" class="min-h-screen flex items-center container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Columna de Texto -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">Ali Zegaa Alós</h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-300">
+                        Desarrollador de Aplicaciones Multiplataforma. Construyo <span class="accent-color">soluciones intuitivas</span> para iOS, Android y la Web.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#proyectos" class="bg-accent-color text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                            Ver mis Proyectos
+                        </a>
+                        <a href="#contacto" class="bg-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-600 transition-all duration-300">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                <!-- Columna Visual (Mockups) -->
+                <div class="relative h-96 hidden md:block">
+                    <!-- Usamos placehold.co para simular los mockups fotorrealistas -->
+                    <img src="https://placehold.co/400x250/1A1A1A/FFFFFF?text=App+en+MacBook" alt="Mockup de App en MacBook" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-2xl z-10 transform hover:scale-105 transition-transform duration-500">
+                    <img src="https://placehold.co/150x300/1A1A1A/FFFFFF?text=App+en+iPhone" alt="Mockup de App en iPhone" class="absolute top-1/4 left-1/4 -translate-x-full rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500">
+                    <img src="https://placehold.co/160x310/1A1A1A/FFFFFF?text=App+en+Pixel" alt="Mockup de App en Google Pixel" class="absolute bottom-0 right-0 translate-x-1/4 rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-2">Proyectos Destacados</h2>
+                <p class="text-center text-gray-400 mb-12">Una selección de mi trabajo más reciente.</p>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tarjeta de Proyecto 1 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/007BFF/FFFFFF?text=Proyecto+UNO" alt="Imagen del Proyecto 1" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">App de Finanzas Personales</h3>
+                            <p class="text-gray-400 mb-4">Una app para iOS y Android que ayuda a los usuarios a gestionar sus finanzas de forma sencilla.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full">SwiftUI</span>
+                                <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2.5 py-1 rounded-full">Kotlin</span>
+                                <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-2.5 py-1 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Proyecto 2 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/39FF14/121212?text=Proyecto+DOS" alt="Imagen del Proyecto 2" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Plataforma de E-learning</h3>
+                            <p class="text-gray-400 mb-4">Web app y app móvil para cursos online con un sistema de gamificación integrado.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">React Native</span>
+                                <span class="bg-yellow-500/20 text-yellow-300 text-xs font-semibold px-2.5 py-1 rounded-full">Node.js</span>
+                                <span class="bg-red-500/20 text-red-300 text-xs font-semibold px-2.5 py-1 rounded-full">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Proyecto 3 -->
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                        <img src="https://placehold.co/600x400/FF4500/FFFFFF?text=Proyecto+TRES" alt="Imagen del Proyecto 3" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Red Social para Viajeros</h3>
+                            <p class="text-gray-400 mb-4">Aplicación para conectar viajeros, compartir rutas y descubrir lugares únicos.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-teal-500/20 text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-1 rounded-full">Google Maps API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tecnologías (Stack) -->
+        <section id="stack" class="py-20 bg-gray-900/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Mi Stack Tecnológico</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="smartphone" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">Desarrollo Nativo</span>
+                        <p class="text-sm text-gray-400">SwiftUI & Kotlin</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="layers" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">Multiplataforma</span>
+                        <p class="text-sm text-gray-400">React Native & Flutter</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="globe" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">Desarrollo Web</span>
+                        <p class="text-sm text-gray-400">React, Node.js, Vue</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="database" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">Bases de Datos</span>
+                        <p class="text-sm text-gray-400">Firebase, MongoDB, SQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Hablemos de tu próximo proyecto</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Estoy disponible para nuevos desafíos y colaboraciones. Si tienes una idea en mente, no dudes en contactarme.</p>
+                <div class="mt-8">
+                    <a href="mailto:tuemail@ejemplo.com" class="bg-accent-color text-white font-semibold text-lg px-8 py-4 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block">
+                        Enviar un Mensaje
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i data-lucide="twitter" class="w-8 h-8"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Ali Zegaa Alós. Diseñado y construido con pasión.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="scripts.js" defer></script>
+</body>
+</html>
