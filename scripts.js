@@ -2,26 +2,67 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar Lucide Icons
-    // Comprobamos si lucide está disponible antes de llamarlo
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
+    // --- LÓGICA PARA HEADER AL HACER SCROLL ---
+    const header = document.querySelector('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Añade la clase después de scrollear 50px
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    }
+
+    // --- LÓGICA PARA EL MENÚ DE HAMBURGUESA ---
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        // Previene el scroll del body cuando el menú está abierto
+        document.body.classList.toggle('overflow-hidden');
+    };
+    
+    // Abrir menú con el botón de hamburguesa
+    if (hamburgerButton) {
+        hamburgerButton.addEventListener('click', toggleMenu);
+    }
+
+    // Cerrar menú con el botón de la 'X'
+    if (closeMenuButton) {
+        closeMenuButton.addEventListener('click', toggleMenu);
+    }
+    
+    // Cerrar menú al hacer clic en un enlace del menú
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+    // --- FIN DE LA LÓGICA DEL MENÚ ---
+
+
     // Script para animación de entrada al hacer scroll
     const sections = document.querySelectorAll('.fade-in-section');
 
-    // Si no hay secciones que animar, no creamos el observer
     if (sections.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    // Opcional: deja de observar el elemento una vez que es visible
-                    // observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.1 // La animación se activa cuando el 10% del elemento es visible
+            threshold: 0.1
         });
 
         sections.forEach(section => {
