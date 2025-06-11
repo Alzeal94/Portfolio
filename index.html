@@ -29,16 +29,36 @@
     </div>
 
     <!-- Barra de Navegación -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-white">Ali Zegaa Alós</a>
+            
+            <!-- Menú de Escritorio -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#proyectos" class="text-gray-300 hover:text-white transition-colors duration-300">Proyectos</a>
                 <a href="#stack" class="text-gray-300 hover:text-white transition-colors duration-300">Tecnologías</a>
                 <a href="#contacto" class="text-gray-300 hover:text-white transition-colors duration-300">Contacto</a>
             </nav>
+
+            <!-- Botón de Hamburguesa para Móvil -->
+            <button id="hamburger-button" class="md:hidden text-white focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-95 z-50">
+        <div class="flex flex-col items-center justify-center h-full relative">
+            <button id="close-menu-button" class="absolute top-6 right-6 text-white focus:outline-none">
+                 <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <a href="#proyectos" class="mobile-menu-link text-3xl text-white mb-8 hover:text-accent-color transition-colors">Proyectos</a>
+            <a href="#stack" class="mobile-menu-link text-3xl text-white mb-8 hover:text-accent-color transition-colors">Tecnologías</a>
+            <a href="#contacto" class="mobile-menu-link text-3xl text-white hover:text-accent-color transition-colors">Contacto</a>
+        </div>
+    </div>
+
 
     <main>
         <!-- Sección Hero -->
@@ -61,14 +81,9 @@
                 </div>
                 <!-- Columna Visual (Mockups) -->
                 <div class="relative h-96 hidden md:block">
-                    <!-- Imagen de Portátil (Central) -->
                     <img src="img/menuApp.png" alt="Mockup de App en Portatil" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-2xl z-10 transform hover:scale-105 transition-transform duration-500 w-auto h-full max-w-xl object-contain">
-                    
-                    <!-- IMAGEN IZQUIERDA -->
-                    <img src="img/inicio.png" alt="Pantalla de inicio de sesión de la app PetSafe" class="absolute top-8 left-1/4 -translate-x-full rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain">
-                    
-                    <!-- IMAGEN DERECHA -->
-                    <img src="img/mapa_preview.png" alt="Pantalla del mapa localizador de la app PetSafe" class="absolute bottom-8 right-0 translate-x-1/4 rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain">
+                    <img src="img/inicio.png" alt="Pantalla de inicio de la app PetSafe" class="absolute top-8 left-1/4 -translate-x-full rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain">
+                    <img src="img/mapa_preview.png" alt="Pantalla del mapa de la app PetSafe" class="absolute bottom-8 right-0 translate-x-1/4 rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain">
                 </div>
             </div>
         </section>
@@ -85,7 +100,7 @@
                         <img src="img/logo.png" alt="Proyecto PetSafe" class="w-full h-56 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white mb-2">PetSafe</h3>
-                            <p class="text-gray-400 mb-4">Una app para iOS y Android que ayuda a los usuarios a cuidar a sus mascotas forma sencilla.</p>
+                            <p class="text-gray-400 mb-4">Aplicación de escritorio para la gestión de adopciones y animales perdidos.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full">JavaFX</span>
                                 <span class="bg-green-500/20 text-green-300 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
@@ -99,7 +114,7 @@
                      <a href="https://github.com/Alzeal94/APP-WEB-INCIDENCIAS" target="_blank" class="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg block">
                         <img src="img/logoApp.jpg" alt="Imagen de Proyecto APP WEB" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Gestor de Incidencias</h3>
+                            <h3 class="text-xl font-bold text-white mb-2">Gestor de Incidencias (Alzimatic)</h3>
                             <p class="text-gray-400 mb-4">Aplicación Web para crear y gestionar las incidencias enviadas por los usuarios.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML5</span>
@@ -110,15 +125,14 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Tarjeta de Proyecto 3 (CORREGIDO) -->
+                    <!-- Tarjeta de Proyecto 3 (Ejemplo con placeholder) -->
                     <a href="#" target="_blank" class="bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg block">
-                        <img src="https://placehold.co/600x400/FF4500/FFFFFF?text=Proyecto+TRES" alt="Imagen del Proyecto 3" class="w-full h-56 object-cover">
+                        <img src="https://placehold.co/600x400/FF4500/FFFFFF?text=Próximamente" alt="Imagen del Proyecto 3" class="w-full h-56 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Red Social para Viajeros</h3>
-                            <p class="text-gray-400 mb-4">Aplicación para conectar viajeros, compartir rutas y descubrir lugares únicos.</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Nuevo Proyecto</h3>
+                            <p class="text-gray-400 mb-4">Actualmente trabajando en nuevas e interesantes soluciones. ¡Más detalles pronto!</p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-teal-500/20 text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                                <span class="bg-indigo-500/20 text-indigo-300 text-xs font-semibold px-2.5 py-1 rounded-full">Google Maps API</span>
+                                <span class="bg-teal-500/20 text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tecnología Top</span>
                             </div>
                         </div>
                     </a>
@@ -126,45 +140,73 @@
             </div>
         </section>
 
-        <!-- Sección Tecnologías (Stack) -->
+        <!-- SECCIÓN TECNOLOGÍAS -->
         <section id="stack" class="py-20 bg-gray-900/50 fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Mi Stack Tecnológico</h2>
-                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
                     <div class="flex flex-col items-center justify-center space-y-2">
-                        <i data-lucide="smartphone" class="w-12 h-12 accent-color"></i>
-                        <span class="font-semibold text-white">Desarrollo Nativo</span>
-                        <p class="text-sm text-gray-400">SwiftUI & Kotlin</p>
+                        <i data-lucide="code-xml" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">HTML5</span>
+                        <p class="text-sm text-gray-400">Maquetación Web</p>
                     </div>
                     <div class="flex flex-col items-center justify-center space-y-2">
-                        <i data-lucide="layers" class="w-12 h-12 accent-color"></i>
-                        <span class="font-semibold text-white">Multiplataforma</span>
-                        <p class="text-sm text-gray-400">React Native & Flutter</p>
+                        <i data-lucide="palette" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">CSS3</span>
+                        <p class="text-sm text-gray-400">Diseño y Estilos</p>
                     </div>
                     <div class="flex flex-col items-center justify-center space-y-2">
-                        <i data-lucide="globe" class="w-12 h-12 accent-color"></i>
-                        <span class="font-semibold text-white">Desarrollo Web</span>
-                        <p class="text-sm text-gray-400">React, Node.js, Vue</p>
+                        <i data-lucide="braces" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">JavaScript</span>
+                        <p class="text-sm text-gray-400">Lógica Frontend</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="server" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">Node.js</span>
+                         <p class="text-sm text-gray-400">Backend</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-2">
+                        <i data-lucide="monitor-smartphone" class="w-12 h-12 accent-color"></i>
+                        <span class="font-semibold text-white">JavaFX</span>
+                        <p class="text-sm text-gray-400">Apps de Escritorio</p>
                     </div>
                     <div class="flex flex-col items-center justify-center space-y-2">
                         <i data-lucide="database" class="w-12 h-12 accent-color"></i>
-                        <span class="font-semibold text-white">Bases de Datos</span>
-                        <p class="text-sm text-gray-400">Firebase, MongoDB, SQL</p>
+                        <span class="font-semibold text-white">MySQL</span>
+                        <p class="text-sm text-gray-400">Bases de Datos</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Contacto -->
+        <!-- Sección Contacto (ACTUALIZADA CON FORMULARIO) -->
         <section id="contacto" class="py-20 fade-in-section">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white">Hablemos de tu próximo proyecto</h2>
-                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Estoy disponible para nuevos desafíos y colaboraciones. Si tienes una idea en mente, no dudes en contactarme.</p>
-                <div class="mt-8">
-                    <a href="mailto:tuemail@ejemplo.com" class="bg-accent-color text-white font-semibold text-lg px-8 py-4 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 inline-block">
-                        Enviar un Mensaje
-                    </a>
-                </div>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Estoy disponible para nuevos desafíos. Rellena el formulario y me pondré en contacto contigo.</p>
+                
+                <!-- Formulario de Contacto -->
+                <form action="https://formspree.io/f/mkgbrwzq" method="POST" class="max-w-xl mx-auto mt-8 text-left">
+                    <input type="hidden" name="_subject" value="Nuevo Mensaje desde tu Portfolio Web">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre</label>
+                        <input type="text" name="name" id="name" required class="w-full px-3 py-2 text-white bg-gray-800/50 rounded-md border border-gray-700 focus:outline-none focus:border-accent-color transition-colors">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                        <input type="email" name="email" id="email" required class="w-full px-3 py-2 text-white bg-gray-800/50 rounded-md border border-gray-700 focus:outline-none focus:border-accent-color transition-colors">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje</label>
+                        <textarea name="message" id="message" rows="4" required class="w-full px-3 py-2 text-white bg-gray-800/50 rounded-md border border-gray-700 focus:outline-none focus:border-accent-color transition-colors"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-accent-color text-white font-semibold text-lg px-8 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+
                 <div class="mt-12 flex justify-center space-x-6">
                      <a href="https://github.com/Alzeal94" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                         <i data-lucide="github" class="w-8 h-8"></i>
@@ -181,7 +223,7 @@
     <!-- Footer -->
     <footer class="border-t border-gray-800 py-6">
         <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2024 Ali Zegaa Alós. Diseñado y construido con pasión.</p>
+            <p>&copy; 2025 Ali Zegaa Alós. Diseñado y construido con pasión.</p>
         </div>
     </footer>
 
