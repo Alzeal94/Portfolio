@@ -5,35 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Zegaa Alós | Desarrollador de Aplicaciones Multiplataforma</title>
     
-    <!-- MEJORA: Meta etiquetas SEO -->
     <meta name="description" content="Portfolio de Ali Zegaa Alós, desarrollador de aplicaciones multiplataforma especializado en iOS, Android y la Web.">
     <meta name="keywords" content="desarrollador, portfolio, aplicaciones, multiplataforma, iOS, Android, web, Ali Zegaa">
 
-    <!-- MEJORA: Metaetiquetas para Redes Sociales (Open Graph) -->
     <meta property="og:title" content="Ali Zegaa Alós | Desarrollador de Aplicaciones">
     <meta property="og:description" content="Echa un vistazo a mi portfolio de proyectos de desarrollo multiplataforma.">
-    <meta property="og:image" content="https://alzeal94.github.io/Portfolio/img/og-image.png"> <!-- ¡Necesitarás crear y subir esta imagen! -->
-    <meta property="og:url" content="https://alzeal94.github.io/Portfolio/">
+    <meta property="og:image" content="https://alzeal94.github.io/Portfolio/img/og-image.png"> <meta property="og:url" content="https://alzeal94.github.io/Portfolio/">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- MEJORA: Favicon Profesional con Iniciales -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%23007BFF'></rect><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='50' font-weight='bold' fill='white'>AZ</text></svg>">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- MEJORA: Optimización de carga de CSS -->
     <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- MEJORA: Typed.js para animación de tipear -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body class="antialiased bg-white dark:bg-gray-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
@@ -77,8 +68,9 @@
 
     <main>
         <section id="home" class="min-h-screen flex items-center container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center pt-24 md:pt-0">
-                <div class="text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center md:items-start md:justify-between w-full pt-24 md:pt-0">
+                
+                <div class="md:w-5/12 text-center md:text-left">
                     <h1 class="text-4xl md:text-6xl font-bold leading-tight">Ali Zegaa Alós</h1>
                     <p class="mt-4 text-lg md:text-xl text-slate-600 dark:text-gray-300 min-h-[56px] md:min-h-[84px]">
                         <span id="typed-subtitle"></span>
@@ -88,7 +80,8 @@
                         <a href="#contacto" class="bg-slate-200 text-slate-800 dark:bg-gray-700 dark:text-white font-semibold px-6 py-3 rounded-md hover:bg-slate-300 dark:hover:bg-gray-600 transition-all duration-300">Contactar</a>
                     </div>
                 </div>
-                <div class="relative h-96 hidden md:block">
+
+                <div class="md:w-6/12 relative h-96 hidden md:block mt-12 md:mt-0">
                     <img src="img/menuApp.png" alt="Mockup de App en Portatil" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-2xl z-10 transform hover:scale-105 transition-transform duration-500 w-auto h-full max-w-xl object-contain" loading="lazy">
                     <img src="img/inicio.png" alt="Pantalla de inicio de la app PetSafe" class="absolute top-8 left-1/4 -translate-x-full rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain" loading="lazy">
                     <img src="img/mapa_preview.png" alt="Pantalla del mapa de la app PetSafe" class="absolute bottom-8 right-0 translate-x-1/4 rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain" loading="lazy">
