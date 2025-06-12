@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tagsContainer.innerHTML = '';
                 data.tags.forEach(tag => {
                     const span = document.createElement('span');
-                    span.className = 'bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full';
+                    span.className = 'tag text-xs font-semibold px-2.5 py-1 rounded-full';
                     span.textContent = tag;
                     tagsContainer.appendChild(span);
                 });
