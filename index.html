@@ -1,212 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es" class="scroll-smooth dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Zegaa Alós | Desarrollador de Aplicaciones Multiplataforma</title>
-    
-    <meta name="description" content="Portfolio de Ali Zegaa Alós, desarrollador de aplicaciones multiplataforma especializado en iOS, Android y la Web.">
-    <meta name="keywords" content="desarrollador, portfolio, aplicaciones, multiplataforma, iOS, Android, web, Ali Zegaa">
+  <head>
+    <meta charset="UTF-8" />
 
-    <meta property="og:title" content="Ali Zegaa Alós | Desarrollador de Aplicaciones">
-    <meta property="og:description" content="Echa un vistazo a mi portfolio de proyectos de desarrollo multiplataforma.">
-    <meta property="og:image" content="https://alzeal94.github.io/Portfolio/img/og-image.png"> <meta property="og:url" content="https://alzeal94.github.io/Portfolio/">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%23007BFF'></rect><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='50' font-weight='bold' fill='white'>AZ</text></svg>">
-    
+    <title>
+      Ali Zegaa Alós | Desarrollador de Aplicaciones Multiplataforma
+    </title>
+
+    <meta
+      name="description"
+      content="Portfolio de Ali Zegaa Alós, desarrollador de aplicaciones multiplataforma especializado en iOS, Android y la Web."
+    />
+
+    <meta
+      name="keywords"
+      content="desarrollador, portfolio, aplicaciones, multiplataforma, iOS, Android, web, Ali Zegaa"
+    />
+
+    <meta
+      property="og:title"
+      content="Ali Zegaa Alós | Desarrollador de Aplicaciones"
+    />
+
+    <meta
+      property="og:description"
+      content="Echa un vistazo a mi portfolio de proyectos de desarrollo multiplataforma."
+    />
+
+    <meta
+      property="og:image"
+      content="https://alzeal94.github.io/Portfolio/img/og-image.png"
+    />
+
+    <meta property="og:url" content="https://alzeal94.github.io/Portfolio/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%23007BFF'></rect><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, sans-serif' font-size='50' font-weight='bold' fill='white'>AZ</text></svg>"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+
+        theme: {
+          extend: {
+            colors: {
+              "accent-color": "#007BFF",
+            },
+          },
+        },
+      };
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.129.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-</head>
-<body class="antialiased bg-white dark:bg-gray-900 text-slate-800 dark:text-slate-200 transition-colors duration-300">
-    
+  </head>
+
+  <body
+    class="antialiased bg-white dark:bg-gray-900 text-slate-800 dark:text-slate-200 transition-colors duration-300"
+  >
     <div class="animated-background">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
+      <div class="shape shape1"></div>
+
+      <div class="shape shape2"></div>
+
+      <div class="shape shape3"></div>
     </div>
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/30 backdrop-blur-md transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold">Ali Zegaa Alós</a>
-            <div class="flex items-center space-x-4">
-                <nav id="desktop-nav" class="hidden md:flex space-x-8 text-slate-600 dark:text-slate-300">
-                    <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-                    <a href="#proyectos" class="nav-link">Proyectos</a>
-                    <a href="#stack" class="nav-link">Tecnologías</a>
-                    <a href="#contacto" class="nav-link">Contacto</a>
-                </nav>
-                <button id="theme-toggle" class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700">
-                    <i id="theme-toggle-dark-icon" data-lucide="moon" class="w-5 h-5 hidden"></i>
-                    <i id="theme-toggle-light-icon" data-lucide="sun" class="w-5 h-5 hidden"></i>
-                </button>
-                <button id="hamburger-button" class="md:hidden text-slate-800 dark:text-white focus:outline-none">
-                    <i data-lucide="menu" class="w-7 h-7"></i>
-                </button>
-            </div>
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/30 backdrop-blur-md transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#home" class="text-xl font-bold">Ali Zegaa Alós</a>
+
+        <div class="flex items-center space-x-4">
+          <nav
+            id="desktop-nav"
+            class="hidden md:flex space-x-8 text-slate-600 dark:text-slate-300"
+          >
+            <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+
+            <a href="#stack" class="nav-link">Tecnologías</a>
+
+            <a href="#contacto" class="nav-link">Contacto</a>
+          </nav>
+
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700"
+          >
+            <i
+              id="theme-toggle-dark-icon"
+              data-lucide="moon"
+              class="w-5 h-5 hidden"
+            ></i>
+
+            <i
+              id="theme-toggle-light-icon"
+              data-lucide="sun"
+              class="w-5 h-5 hidden"
+            ></i>
+          </button>
+
+          <button
+            id="hamburger-button"
+            class="md:hidden text-slate-800 dark:text-white focus:outline-none"
+          >
+            <i data-lucide="menu" class="w-7 h-7"></i>
+          </button>
         </div>
+      </div>
     </header>
 
-    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-white dark:bg-gray-900 z-[60]">
-        <div class="flex flex-col items-center justify-center h-full relative">
-            <button id="close-menu-button" class="absolute top-6 right-6 focus:outline-none"><i data-lucide="x" class="w-8 h-8"></i></button>
-            <a href="#sobre-mi" class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors">Sobre Mí</a>
-            <a href="#proyectos" class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors">Proyectos</a>
-            <a href="#stack" class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors">Tecnologías</a>
-            <a href="#contacto" class="mobile-menu-link text-3xl hover:text-accent-color transition-colors">Contacto</a>
-        </div>
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-0 left-0 w-full h-screen bg-white dark:bg-gray-900 z-[60]"
+    >
+      <div class="flex flex-col items-center justify-center h-full relative">
+        <button
+          id="close-menu-button"
+          class="absolute top-6 right-6 focus:outline-none"
+        >
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+
+        <a
+          href="#sobre-mi"
+          class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors"
+          >Sobre Mí</a
+        >
+
+        <a
+          href="#proyectos"
+          class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors"
+          >Proyectos</a
+        >
+
+        <a
+          href="#stack"
+          class="mobile-menu-link text-3xl mb-8 hover:text-accent-color transition-colors"
+          >Tecnologías</a
+        >
+
+        <a
+          href="#contacto"
+          class="mobile-menu-link text-3xl hover:text-accent-color transition-colors"
+          >Contacto</a
+        >
+      </div>
     </div>
 
     <main>
-        <section id="home" class="min-h-screen flex items-center container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center md:items-start md:justify-between w-full pt-24 md:pt-0">
-                
-                <div class="md:w-5/12 text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Ali Zegaa Alós</h1>
-                    <p class="mt-4 text-lg md:text-xl text-slate-600 dark:text-gray-300 min-h-[56px] md:min-h-[84px]">
-                        <span id="typed-subtitle"></span>
-                    </p>
-                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
-                        <a href="#proyectos" class="bg-accent-color text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Ver mis Proyectos</a>
-                        <a href="#contacto" class="bg-slate-200 text-slate-800 dark:bg-gray-700 dark:text-white font-semibold px-6 py-3 rounded-md hover:bg-slate-300 dark:hover:bg-gray-600 transition-all duration-300">Contactar</a>
-                    </div>
-                </div>
+      <section
+        id="home"
+        class="min-h-screen flex items-center container mx-auto px-6 pt-24"
+      >
+        <div class="flex flex-col w-full gap-8">
+          <div class="hero-text-card">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+              Ali Zegaa Alós
+            </h1>
 
-                <div class="md:w-6/12 relative h-96 hidden md:block mt-12 md:mt-0">
-                    <img src="img/menuApp.png" alt="Mockup de App en Portatil" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-2xl z-10 transform hover:scale-105 transition-transform duration-500 w-auto h-full max-w-xl object-contain" loading="lazy">
-                    <img src="img/inicio.png" alt="Pantalla de inicio de la app PetSafe" class="absolute top-8 left-1/4 -translate-x-full rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain" loading="lazy">
-                    <img src="img/mapa_preview.png" alt="Pantalla del mapa de la app PetSafe" class="absolute bottom-8 right-0 translate-x-1/4 rounded-2xl shadow-2xl z-20 transform hover:scale-105 transition-transform duration-500 h-80 w-auto object-contain" loading="lazy">
-                </div>
-            </div>
-        </section>
+            <p
+              class="mt-2 text-lg md:text-xl text-slate-600 dark:text-gray-300 min-h-[40px]"
+            >
+              <span id="typed-subtitle"></span>
+            </p>
 
-        <section id="sobre-mi" class="py-20 bg-slate-100 dark:bg-slate-800 fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-12 items-center">
-                    <div class="md:col-span-1">
-                        <img src="img/foto.jpeg" alt="Foto de Ali Zegaa Alós" class="rounded-lg shadow-lg w-full" loading="lazy">
-                    </div>
-                    <div class="md:col-span-2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre Mí</h2>
-                        <p class="text-slate-600 dark:text-gray-300 mb-4">Soy un desarrollador apasionado con experiencia en la creación de aplicaciones funcionales y atractivas para diversas plataformas. Mi objetivo es transformar ideas complejas en soluciones de software elegantes y eficientes, prestando siempre la máxima atención a la experiencia del usuario final.</p>
-                        <p class="text-slate-600 dark:text-gray-300 mb-6">Disfruto enfrentando nuevos desafíos y aprendiendo constantemente sobre las últimas tecnologías del sector. Creo firmemente que un buen código no solo debe funcionar, sino también ser escalable y fácil de mantener.</p>
-                        <a href="cv.pdf" download="CV-Ali-Zegaa-Alos.pdf" class="bg-accent-color text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center space-x-2"><i data-lucide="download" class="w-5 h-5"></i><span>Descargar mi CV</span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="mt-6 flex space-x-4">
+              <a
+                href="#proyectos"
+                class="bg-accent-color text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
+                >Ver mis Proyectos</a
+              >
 
-        <section id="proyectos" class="py-20 bg-white dark:bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 fade-in-section">Proyectos Destacados</h2>
-                <p class="text-center text-slate-600 dark:text-gray-400 mb-12 fade-in-section">Una selección de mi trabajo más reciente.</p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div data-project="petsafe" class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section">
-                        <img src="img/logo.png" alt="Proyecto PetSafe" class="w-full h-56 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">PetSafe</h3>
-                            <p class="text-slate-600 dark:text-gray-400 mb-4">Aplicación de escritorio para la gestión de adopciones y animales perdidos.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full">JavaFX</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-project="alzimatic" class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section">
-                        <img src="img/logoApp.jpg" alt="Imagen de Proyecto APP WEB" class="w-full h-56 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Gestor de Incidencias</h3>
-                            <p class="text-slate-600 dark:text-gray-400 mb-4">Aplicación Web para crear y gestionar las incidencias.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-300 text-xs font-semibold px-2.5 py-1 rounded-full">Node.js</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-project="viajeros" class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section">
-                        <img src="https://placehold.co/600x400/FF4500/FFFFFF?text=Próximamente" alt="Imagen del Proyecto 3" class="w-full h-56 object-cover" loading="lazy">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Red Social para Viajeros</h3>
-                            <p class="text-slate-600 dark:text-gray-400 mb-4">Concepto de una aplicación para conectar viajeros.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-teal-100 text-teal-800 dark:bg-teal-500/20 dark:text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">Flutter</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <a
+                href="#contacto"
+                class="bg-slate-200 text-slate-800 dark:bg-gray-700 dark:text-white font-semibold px-6 py-3 rounded-md hover:bg-slate-300 dark:hover:bg-gray-600 transition-all duration-300"
+                >Contactar</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="stack" class="py-20 bg-slate-100 dark:bg-slate-800 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Mi Stack Tecnológico</h2>
-                <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="code-xml" class="w-12 h-12 accent-color"></i><span class="font-semibold">HTML5</span><p class="text-sm text-slate-600 dark:text-gray-400">Maquetación Web</p></div>
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="palette" class="w-12 h-12 accent-color"></i><span class="font-semibold">CSS3</span><p class="text-sm text-slate-600 dark:text-gray-400">Diseño y Estilos</p></div>
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="braces" class="w-12 h-12 accent-color"></i><span class="font-semibold">JavaScript</span><p class="text-sm text-slate-600 dark:text-gray-400">Lógica Frontend</p></div>
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="server" class="w-12 h-12 accent-color"></i><span class="font-semibold">Node.js</span><p class="text-sm text-slate-600 dark:text-gray-400">Backend</p></div>
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="monitor-smartphone" class="w-12 h-12 accent-color"></i><span class="font-semibold">JavaFX</span><p class="text-sm text-slate-600 dark:text-gray-400">Apps de Escritorio</p></div>
-                    <div class="tech-stack-item flex flex-col items-center justify-center space-y-2"><i data-lucide="database" class="w-12 h-12 accent-color"></i><span class="font-semibold">MySQL</span><p class="text-sm text-slate-600 dark:text-gray-400">Bases de Datos</p></div>
-                </div>
-            </div>
-        </section>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full h-auto md:h-[400px]">
+  <div class="hero-images-zone">
+    <img src="img/menuApp.png" alt="Laptop" class="img-laptop" loading="lazy" />
+    <img src="img/inicio.png" alt="Móvil 1" class="img-mobile-1" loading="lazy" />
+    <img src="img/mapa_preview.png" alt="Móvil 2" class="img-mobile-2" loading="lazy" />
+  </div>
 
-        <section id="contacto" class="py-20 bg-white dark:bg-gray-900">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold fade-in-section">Hablemos de tu próximo proyecto</h2>
-                <p class="mt-4 text-lg text-slate-600 dark:text-gray-300 max-w-2xl mx-auto fade-in-section">Estoy disponible para nuevos desafíos. Rellena el formulario y me pondré en contacto contigo.</p>
-                <div id="form-container" class="max-w-xl mx-auto mt-8 text-left fade-in-section">
-                    <form id="contact-form" action="https://formspree.io/f/mkgbrwzq" method="POST">
-                        <input type="hidden" name="_subject" value="Nuevo Mensaje desde tu Portfolio Web">
-                        <div class="mb-4"><label for="name" class="block text-sm font-bold mb-2">Nombre</label><input type="text" name="name" id="name" required class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color transition-colors"></div>
-                        <div class="mb-4"><label for="email" class="block text-sm font-bold mb-2">Email</label><input type="email" name="email" id="email" required class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color transition-colors"></div>
-                        <div class="mb-6"><label for="message" class="block text-sm font-bold mb-2">Mensaje</label><textarea name="message" id="message" rows="4" required class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color transition-colors"></textarea></div>
-                        <div class="text-center"><button type="submit" class="bg-accent-color text-white font-semibold text-lg px-8 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Enviar Mensaje</button></div>
-                    </form>
-                    <div id="form-feedback" class="mt-4"></div>
-                </div>
-                <div class="mt-12 flex justify-center space-x-6 text-slate-500">
-                    <a href="https://github.com/Alzeal94" target="_blank" class="dark:text-gray-400 hover:text-accent-color dark:hover:text-white transition-colors duration-300"><i data-lucide="github" class="w-8 h-8"></i></a>
-                    <a href="https://www.linkedin.com/in/ali-zegaa-al%C3%B3s-19768413b/" target="_blank" class="dark:text-gray-400 hover:text-accent-color dark:hover:text-white transition-colors duration-300"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
-                </div>
+  <div class="hero-3d-zone relative w-full h-[350px] md:h-full">
+    <div id="container3D" class="w-full h-full min-h-[300px]"></div>
+
+    <div class="sceneControls absolute bottom-4 right-4 z-50">
+      <button id="toggleParticles" type="button" class="bg-black/50 text-white px-3 py-1 rounded-full text-[10px] border border-white/20">
+        Ver partículas
+      </button>
+    </div>
+  </div>
+</div>
+      </section>
+
+      <section
+        id="sobre-mi"
+        class="py-20 bg-slate-100 dark:bg-slate-800 fade-in-section"
+      >
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-3 gap-12 items-center">
+            <div class="md:col-span-1">
+              <img
+                src="img/foto.jpeg"
+                alt="Foto de Ali Zegaa Alós"
+                class="rounded-lg shadow-lg w-full"
+                loading="lazy"
+              />
             </div>
-        </section>
+
+            <div class="md:col-span-2">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre Mí</h2>
+
+              <p class="text-slate-600 dark:text-gray-300 mb-4">
+                Soy un desarrollador apasionado con experiencia en la creación
+                de aplicaciones funcionales y atractivas para diversas
+                plataformas...
+              </p>
+
+              <p class="text-slate-600 dark:text-gray-300 mb-6">
+                Disfruto enfrentando nuevos desafíos y aprendiendo
+                constantemente...
+              </p>
+
+              <a
+                href="cv.pdf"
+                download="CV-Ali-Zegaa-Alos.pdf"
+                class="bg-accent-color text-white font-semibold px-6 py-3 rounded-md hover:bg-opacity-90 transition-all duration-300 inline-flex items-center space-x-2"
+                ><i data-lucide="download" class="w-5 h-5"></i
+                ><span>Descargar mi CV</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-2 fade-in-section"
+          >
+            Proyectos Destacados
+          </h2>
+
+          <p
+            class="text-center text-slate-600 dark:text-gray-400 mb-12 fade-in-section"
+          >
+            Una selección de mi trabajo más reciente.
+          </p>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              data-project="petsafe"
+              class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section"
+            >
+              <img
+                src="img/logo.png"
+                alt="Proyecto PetSafe"
+                class="w-full h-56 object-cover"
+                loading="lazy"
+              />
+
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">PetSafe</h3>
+
+                <p class="text-slate-600 dark:text-gray-400 mb-4">
+                  Aplicación de escritorio para la gestión de adopciones y
+                  animales perdidos.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300 text-xs font-semibold px-2.5 py-1 rounded-full"
+                    >JavaFX</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              data-project="alzimatic"
+              class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section"
+            >
+              <img
+                src="img/logoApp.jpg"
+                alt="Gestor de Incidencias"
+                class="w-full h-56 object-cover"
+                loading="lazy"
+              />
+
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Gestor de Incidencias</h3>
+
+                <p class="text-slate-600 dark:text-gray-400 mb-4">
+                  Aplicación Web para crear y gestionar las incidencias.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-300 text-xs font-semibold px-2.5 py-1 rounded-full"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              data-project="viajeros"
+              class="project-card bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg dark:shadow-2xl cursor-pointer fade-in-section"
+            >
+              <img
+                src="https://placehold.co/600x400/FF4500/FFFFFF?text=Próximamente"
+                alt="Próximamente"
+                class="w-full h-56 object-cover"
+                loading="lazy"
+              />
+
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Red Social para Viajeros</h3>
+
+                <p class="text-slate-600 dark:text-gray-400 mb-4">
+                  Concepto de una aplicación para conectar viajeros.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="bg-teal-100 text-teal-800 dark:bg-teal-500/20 dark:text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full"
+                    >Flutter</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <article
+            class="mt-16 bg-white dark:bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 fade-in-section"
+            id="conway"
+          >
+            <div
+              id="gol-header"
+              class="p-6 border-b border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">
+                  Proyecto especial · Conway's Game of Life
+                </h3>
+
+                <p class="text-sm text-slate-500 dark:text-gray-400">
+                  Autómata celular clásico. Click para dibujar, Space para
+                  pausar.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-2 items-center">
+                <button
+                  class="bg-accent-color text-white px-4 py-2 rounded text-sm hover:opacity-90 transition-opacity"
+                  id="golToggle"
+                  type="button"
+                >
+                  Comenzar
+                </button>
+
+                <button
+                  class="border border-slate-200 dark:border-slate-600 px-4 py-2 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+                  id="golRandom"
+                  type="button"
+                >
+                  Aleatorio
+                </button>
+
+                <button
+                  class="border border-slate-200 dark:border-slate-600 px-4 py-2 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+                  id="golClear"
+                  type="button"
+                >
+                  Limpiar
+                </button>
+
+                <label class="flex items-center gap-2 text-sm ml-2">
+                  <span>Velocidad</span>
+
+                  <input
+                    id="golSpeed"
+                    type="range"
+                    min="1"
+                    max="30"
+                    value="12"
+                    class="accent-blue-500"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="bg-black relative">
+              <canvas
+                id="golCanvas"
+                width="960"
+                height="360"
+                class="block w-full cursor-crosshair"
+              ></canvas>
+            </div>
+
+            <div
+              id="gol-footer"
+              class="w-full p-4 border-t border-gray-200 dark:border-gray-700"
+            >
+              <div
+                class="gol-instructions flex justify-center gap-4 text-xs font-mono opacity-70"
+              >
+                <div><span>Click</span> pinta/borra</div>
+
+                <div><span>Drag</span> pinta</div>
+
+                <div><span>Space</span> pausa</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="stack"
+        class="py-20 bg-slate-100 dark:bg-slate-800 fade-in-section"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12">
+            Mi Stack Tecnológico
+          </h2>
+
+          <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i data-lucide="code-xml" class="w-12 h-12 accent-color"></i
+              ><span class="font-semibold">HTML5</span>
+            </div>
+
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i data-lucide="palette" class="w-12 h-12 accent-color"></i
+              ><span class="font-semibold">CSS3</span>
+            </div>
+
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i data-lucide="braces" class="w-12 h-12 accent-color"></i
+              ><span class="font-semibold">JavaScript</span>
+            </div>
+
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i data-lucide="server" class="w-12 h-12 accent-color"></i
+              ><span class="font-semibold">Node.js</span>
+            </div>
+
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i
+                data-lucide="monitor-smartphone"
+                class="w-12 h-12 accent-color"
+              ></i
+              ><span class="font-semibold">JavaFX</span>
+            </div>
+
+            <div
+              class="tech-stack-item flex flex-col items-center justify-center space-y-2"
+            >
+              <i data-lucide="database" class="w-12 h-12 accent-color"></i
+              ><span class="font-semibold">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold fade-in-section">
+            Hablemos de tu próximo proyecto
+          </h2>
+
+          <div
+            id="form-container"
+            class="max-w-xl mx-auto mt-8 text-left fade-in-section"
+          >
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mkgbrwzq"
+              method="POST"
+            >
+              <div class="mb-4">
+                <label for="name" class="block text-sm font-bold mb-2"
+                  >Nombre</label
+                ><input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="block text-sm font-bold mb-2"
+                  >Email</label
+                ><input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label for="message" class="block text-sm font-bold mb-2"
+                  >Mensaje</label
+                ><textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 rounded-md border border-slate-300 dark:border-gray-600 focus:outline-none focus:border-accent-color"
+                ></textarea>
+              </div>
+
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="bg-accent-color text-white font-semibold text-lg px-8 py-3 rounded-md hover:bg-opacity-90 transform hover:scale-105 transition-all"
+                >
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
+
+            <div id="form-feedback" class="mt-4"></div>
+          </div>
+
+          <div class="mt-12 flex justify-center space-x-6 text-slate-500">
+            <a
+              href="https://github.com/Alzeal94"
+              target="_blank"
+              class="dark:text-gray-400 hover:text-accent-color transition-colors"
+              ><i data-lucide="github" class="w-8 h-8"></i
+            ></a>
+
+            <a
+              href="https://www.linkedin.com/in/ali-zegaa-al%C3%B3s-19768413b/"
+              target="_blank"
+              class="dark:text-gray-400 hover:text-accent-color transition-colors"
+              ><i data-lucide="linkedin" class="w-8 h-8"></i
+            ></a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent-color text-white p-3 rounded-full shadow-lg hidden hover:bg-opacity-90 transition-all duration-300 z-40">
-        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-accent-color text-white p-3 rounded-full shadow-lg hidden hover:bg-opacity-90 z-40"
+    >
+      <i data-lucide="arrow-up" class="w-6 h-6"></i>
     </button>
 
-    <div id="project-modal" class="hidden fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4">
-        <div id="modal-content" class="bg-white dark:bg-slate-800 rounded-lg shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-slate-500 dark:text-gray-400 hover:text-accent-color"><i data-lucide="x" class="w-8 h-8"></i></button>
-            <img id="modal-img" src="" alt="Imagen del proyecto" class="w-full h-64 object-cover rounded-lg mb-6" loading="lazy">
-            <h3 id="modal-title" class="text-3xl font-bold mb-4"></h3>
-            <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
-            <h4 class="text-xl font-semibold mb-2">El Problema</h4>
-            <p id="modal-problem" class="text-slate-600 dark:text-gray-300 mb-6"></p>
-            <h4 class="text-xl font-semibold mb-2">Mi Solución</h4>
-            <p id="modal-solution" class="text-slate-600 dark:text-gray-300 mb-6"></p>
-            <a id="modal-github-link" href="#" target="_blank" class="bg-slate-100 text-slate-800 hover:bg-slate-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 font-semibold px-6 py-3 rounded-md transition-all duration-300 inline-flex items-center space-x-2">
-                <i data-lucide="github" class="w-5 h-5"></i>
-                <span>Ver en GitHub</span>
-            </a>
-        </div>
+    <div
+      id="project-modal"
+      class="hidden fixed inset-0 bg-black/80 z-[70] flex items-center justify-center p-4"
+    >
+      <div
+        id="modal-content"
+        class="bg-white dark:bg-slate-800 rounded-lg shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300"
+      >
+        <button
+          id="close-modal-button"
+          class="absolute top-4 right-4 text-slate-500 dark:text-gray-400 hover:text-accent-color"
+        >
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+
+        <img
+          id="modal-img"
+          src=""
+          alt="Imagen del proyecto"
+          class="w-full h-64 object-cover rounded-lg mb-6"
+          loading="lazy"
+        />
+
+        <h3 id="modal-title" class="text-3xl font-bold mb-4"></h3>
+
+        <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
+
+        <h4 class="text-xl font-semibold mb-2">El Problema</h4>
+
+        <p
+          id="modal-problem"
+          class="text-slate-600 dark:text-gray-300 mb-6"
+        ></p>
+
+        <h4 class="text-xl font-semibold mb-2">Mi Solución</h4>
+
+        <p
+          id="modal-solution"
+          class="text-slate-600 dark:text-gray-300 mb-6"
+        ></p>
+
+        <a
+          id="modal-github-link"
+          href="#"
+          target="_blank"
+          class="bg-slate-100 text-slate-800 hover:bg-slate-200 dark:bg-gray-700 dark:text-white font-semibold px-6 py-3 rounded-md transition-all inline-flex items-center space-x-2"
+          ><i data-lucide="github" class="w-5 h-5"></i
+          ><span>Ver en GitHub</span></a
+        >
+      </div>
     </div>
 
-    <footer class="border-t border-slate-200 dark:border-gray-800 py-6">
-        <div class="container mx-auto px-6 text-center text-slate-500 dark:text-gray-500">
-            <p>&copy; 2025 Ali Zegaa Alós. Diseñado y construido con pasión.</p>
-        </div>
+    <footer
+      class="border-t border-slate-200 dark:border-gray-800 py-6 text-center text-slate-500"
+    >
+      <p>&copy; 2026 Ali Zegaa Alós. Diseñado con pasión.</p>
     </footer>
-
-    <script src="scripts.js" defer></script>
-</body>
+  </body>
 </html>

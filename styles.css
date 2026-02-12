@@ -2,105 +2,488 @@
    Configuración Base y Fuentes
    ========================================================================== */
 body {
-    font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: "Poppins", sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
-html, body {
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
-   TEMA CLARO (con la paleta de colores opuestos)
+   TEMA CLARO
    ========================================================================== */
-.light body { background-color: #EEE7D8; color: #2E2A24; }
-.light h1, .light h2, .light h3, .light h4, .light a { color: #1D170F; }
-.light p { color: #342A1E; }
-.light header { background-color: rgba(238, 231, 216, 0.8); }
-.light header.header-scrolled { background-color: rgba(225, 214, 196, 0.85); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-.light nav a, .light #hamburger-button, .light #close-menu-button { color: #342A1E; }
-.light .accent-color { color: #FF8400; }
-.light .bg-accent-color { background-color: #FF8400; }
-.light a.bg-slate-200 { background-color: #E0D6C8; color: #1D170F; }
-.light a.bg-slate-200:hover { background-color: #C8BEAE; }
-.light #sobre-mi, .light #stack { background-color: #E1D6C4; }
-.light #proyectos, .light #contacto { background-color: #FFFFFF; }
-.light .project-card { background-color: #FFFFFF; border: 1px solid #E1D6C4; }
-.light .project-card p { color: #635C50; }
-.light [data-project="petsafe"] .flex span { background-color: #6C3A02; color: white; }
-.light [data-project="alzimatic"] .flex span { background-color: #021FB8; color: white; }
-.light [data-project="viajeros"] .flex span { background-color: #66091B; color: white; }
-.light .tech-stack-item p { color: #635C50; }
-.light #contact-form input, .light #contact-form textarea { background-color: #E0D6C8; border: 1px solid #C8BEAE; color: #1D170F;}
-.light .mt-12 a { color: #635C50; }
-.light .mt-12 a:hover { color: #FF8400; }
-.light footer { border-top: 1px solid #C8BEAE; color: #635C50; }
-.light #mobile-menu { background-color: #E1D6C4; }
-.light #modal-content { background-color: #FFFFFF; }
-.light #modal-github-link { background-color: #E0D6C8; color: #1D170F; }
+.light body {
+  background-color: #eee7d8;
+  color: #2e2a24;
+}
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light a {
+  color: #1d170f;
+}
+.light p {
+  color: #342a1e;
+}
+.light header {
+  background-color: rgba(238, 231, 216, 0.8);
+}
+.light header.header-scrolled {
+  background-color: rgba(225, 214, 196, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.light nav a,
+.light #hamburger-button,
+.light #close-menu-button {
+  color: #342a1e;
+}
+.light .accent-color {
+  color: #ff8400;
+}
+.light .bg-accent-color {
+  background-color: #ff8400;
+}
+.light a.bg-slate-200 {
+  background-color: #e0d6c8;
+  color: #1d170f;
+}
+.light a.bg-slate-200:hover {
+  background-color: #c8beae;
+}
+.light #sobre-mi,
+.light #stack {
+  background-color: #e1d6c4;
+}
+.light #proyectos,
+.light #contacto {
+  background-color: #eee7d8;
+}
+.light .project-card {
+  background-color: #e1d6c4;
+  border: 1px solid #e1d6c4;
+}
+.light .project-card p {
+  color: #635c50;
+}
+
+/* Marcado de Sección Activa (Modo Claro) */
+.light .nav-link.active {
+  color: #ff8400;
+  font-weight: 600;
+}
+.light .nav-link.active::after {
+  transform: scaleX(1);
+  background-color: #ff8400;
+}
+
+/* Colores etiquetas Proyectos (Claro) */
+.light [data-project="petsafe"] .flex span {
+  background-color: #6c3a02;
+  color: white;
+}
+.light [data-project="alzimatic"] .flex span {
+  background-color: #021fb8;
+  color: white;
+}
+.light [data-project="viajeros"] .flex span {
+  background-color: #66091b;
+  color: white;
+}
+
+.light .tech-stack-item p {
+  color: #635c50;
+}
+.light #contact-form input,
+.light #contact-form textarea {
+  background-color: #e0d6c8;
+  border: 1px solid #c8beae;
+  color: #1d170f;
+}
+.light footer {
+  border-top: 1px solid #c8beae;
+  color: #635c50;
+}
+.light #modal-content {
+  background-color: #ffffff;
+}
+
+/* Forzar color crema en el Juego de la Vida */
+.light #gol-header,
+.light #gol-footer {
+  background-color: #e1d6c4 !important;
+  color: #1d170f !important;
+}
+.light .gol-instructions span {
+  background-color: #2e2a24;
+  color: #e1d6c4;
+}
 
 /* ==========================================================================
    TEMA OSCURO
    ========================================================================== */
-.dark body { background-color: #111827; color: #e2e8f0; }
-.dark h1, .dark h2, .dark h3, .dark h4, .dark a { color: #FFFFFF; }
-.dark p { color: #D1D5DB; }
-.dark header { background-color: rgba(18, 18, 18, 0.3); }
-.dark header.header-scrolled { background-color: rgba(18, 18, 18, 0.85); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
-.dark nav a { color: #cbd5e1; }
-.dark #hamburger-button, .dark #close-menu-button { color: #FFFFFF; }
-.dark .accent-color { color: #007BFF; }
-.dark .bg-accent-color { background-color: #007BFF; }
-.dark a[href="#contacto"] { background-color: #374151; color: #FFFFFF; }
-.dark a[href="#contacto"]:hover { background-color: #4B5563; }
-.dark #sobre-mi, .dark #stack { background-color: #1e293b; }
-.dark #proyectos, .dark #contacto { background-color: #111827; }
-.dark .project-card { background-color: #1f2937; }
-.dark .project-card p { color: #9CA3AF; }
-.dark [data-project="petsafe"] .flex span { background-color: rgba(59, 130, 246, 0.2); color: #93c5fd; }
-.dark [data-project="alzimatic"] .flex span { background-color: rgba(234, 179, 8, 0.2); color: #fde047; }
-.dark [data-project="viajeros"] .flex span { background-color: rgba(20, 184, 166, 0.2); color: #99f6e4; }
-.dark .tech-stack-item p { color: #9CA3AF; }
-.dark #contact-form input, .dark #contact-form textarea { background-color: #374151; border: 1px solid #4B5563; color: #FFFFFF; }
-.dark .mt-12 a { color: #9CA3AF; }
-.dark .mt-12 a:hover { color: #FFFFFF; }
-.dark footer { border-top: 1px solid #374151; color: #6B7280; }
-.dark #mobile-menu { background-color: #111827; }
-.dark #modal-content { background-color: #1e293b; }
-.dark #modal-github-link { background-color: #374151; color: #FFFFFF; }
+.dark body {
+  background-color: #111827;
+  color: #e2e8f0;
+}
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark a {
+  color: #ffffff;
+}
+.dark p {
+  color: #d1d5db;
+}
+.dark header {
+  background-color: rgba(18, 18, 18, 0.3);
+}
+.dark header.header-scrolled {
+  background-color: rgba(18, 18, 18, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.dark nav a {
+  color: #cbd5e1;
+}
+.dark #hamburger-button,
+.dark #close-menu-button {
+  color: #ffffff;
+}
+.dark .accent-color {
+  color: #007bff;
+}
+.dark .bg-accent-color {
+  background-color: #007bff;
+}
+.dark #sobre-mi,
+.dark #stack {
+  background-color: #1e293b;
+}
+.dark #proyectos,
+.dark #contacto {
+  background-color: #111827;
+}
+.dark .project-card {
+  background-color: #1f2937;
+}
+
+/* Marcado de Sección Activa (Modo Oscuro) */
+.dark .nav-link.active {
+  color: #007bff;
+  font-weight: 600;
+}
+.dark .nav-link.active::after {
+  transform: scaleX(1);
+  background-color: #007bff;
+}
+
+/* Colores etiquetas Proyectos (Oscuro) */
+.dark [data-project="petsafe"] .flex span {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+.dark [data-project="alzimatic"] .flex span {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #fde047;
+}
+.dark [data-project="viajeros"] .flex span {
+  background-color: rgba(20, 184, 166, 0.2);
+  color: #99f6e4;
+}
+
+.dark #contact-form input,
+.dark #contact-form textarea {
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  color: #ffffff;
+}
+.dark footer {
+  border-top: 1px solid #374151;
+  color: #6b7280;
+}
+.dark #modal-content {
+  background-color: #1e293b;
+}
 
 /* ==========================================================================
-   Animaciones y Estilos Funcionales (Independientes del tema)
+   Animaciones y Estructura Global
    ========================================================================== */
-.light .animated-background { display: none; }
-.animated-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
-.shape { position: absolute; border-radius: 50%; background: rgba(0, 123, 255, 0.1); filter: blur(100px); animation: move 25s infinite alternate ease-in-out; }
-.shape1 { width: 400px; height: 400px; top: -10%; left: -10%; }
-.shape2 { width: 500px; height: 500px; bottom: -15%; right: -15%; animation-duration: 30s; }
-.shape3 { width: 300px; height: 300px; bottom: 25%; left: 20%; animation-duration: 20s; }
-@keyframes move { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(100px, 50px) rotate(30deg); } }
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.light .animated-background {
+  display: none;
+}
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1);
+  filter: blur(100px);
+  animation: move 25s infinite alternate ease-in-out;
+}
+.shape1 {
+  width: 400px;
+  height: 400px;
+  top: -10%;
+  left: -10%;
+}
+.shape2 {
+  width: 500px;
+  height: 500px;
+  bottom: -15%;
+  right: -15%;
+  animation-duration: 30s;
+}
+.shape3 {
+  width: 300px;
+  height: 300px;
+  bottom: 25%;
+  left: 20%;
+  animation-duration: 20s;
+}
 
-.fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
-.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+@keyframes move {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(100px, 50px) rotate(30deg);
+  }
+}
 
-body.overflow-hidden { overflow: hidden; }
-#mobile-menu { transition: opacity 0.3s ease-in-out; }
-#mobile-menu:not(.hidden) .mobile-menu-link { animation: fadeInLinks 0.5s ease-out forwards; opacity: 0; }
-#mobile-menu:not(.hidden) .mobile-menu-link:nth-child(2) { animation-delay: 0.1s; }
-#mobile-menu:not(.hidden) .mobile-menu-link:nth-child(3) { animation-delay: 0.2s; }
-#mobile-menu:not(.hidden) .mobile-menu-link:nth-child(4) { animation-delay: 0.3s; }
-@keyframes fadeInLinks { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-.nav-link { position: relative; padding-bottom: 4px; transition: color 0.3s; }
-.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: #007BFF; transform: scaleX(0); transform-origin: bottom right; transition: transform 0.3s ease-out; }
-.light .nav-link:hover::after, .light .nav-link.active::after { background-color: #FF8400; }
-.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: bottom left; }
-.nav-link.active { color: #007BFF; }
-.light .nav-link.active { color: #FF8400; }
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+  transform-origin: left;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
 
-.tech-stack-item { transition: transform 0.3s ease; }
-.tech-stack-item:hover { transform: scale(1.1); }
-#project-modal.open #modal-content { transform: scale(1); }
-#back-to-top { transition: opacity 0.3s, transform 0.3s; }
-#back-to-top.hidden { opacity: 0; transform: translateY(20px); }
-#contact-form input:invalid, #contact-form textarea:invalid { border-color: #ef4444; }
+/* ==========================================================================
+   SECCIÓN HERO RESPONSIVA
+   ========================================================================== */
+
+/* Forzamos que el grid pase a una columna antes (1024px) para evitar choque */
+@media (max-width: 1024px) {
+  main section#home .grid {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.hero-text-card {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 768px) {
+  .hero-text-card {
+    text-align: left;
+  }
+}
+.dark .hero-text-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.light .hero-text-card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Zona de Imágenes Hero */
+.hero-images-zone {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #e1d6c4;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark .hero-images-zone {
+  background-color: #1e293b;
+}
+
+.img-laptop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: auto;
+  z-index: 10;
+  object-fit: contain;
+  transition: width 0.3s ease;
+}
+
+/* Móviles con Hover original restaurado */
+.img-mobile-1,
+.img-mobile-2 {
+  position: absolute;
+  height: 70%;
+  width: auto;
+  z-index: 20;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+}
+
+.img-mobile-1 {
+  left: 4%;
+  transform: rotate(-5deg);
+}
+.img-mobile-2 {
+  right: 4%;
+  transform: rotate(5deg);
+}
+
+/* --- EFECTO HOVER RESTAURADO --- */
+.img-mobile-1:hover {
+  transform: translateY(-15px) scale(1.05) rotate(-2deg);
+  z-index: 30;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+.img-mobile-2:hover {
+  transform: translateY(-15px) scale(1.05) rotate(2deg);
+  z-index: 30;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Escalado dinámico según el ancho de pantalla */
+@media (max-width: 1024px) {
+  .hero-images-zone {
+    height: 350px;
+  }
+  .img-laptop {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-images-zone {
+    height: 300px;
+  }
+  .img-laptop {
+    width: 85%;
+  }
+  .img-mobile-1 {
+    left: 2%;
+    height: 55%;
+  }
+  .img-mobile-2 {
+    right: 2%;
+    height: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-mobile-2 {
+    display: none;
+  }
+  .img-mobile-1 {
+    left: 50%;
+    transform: translateX(-50%) translateY(20%);
+    height: 65%;
+  }
+}
+
+/* ==========================================================================
+   ZONA 3D Y JUEGOS (BLINDAJE CONTRA TAILWIND)
+   ========================================================================== */
+.hero-3d-zone {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* CAMBIO: COLOR DE FONDO AÑADIDO */
+  background-color: #e1d6c4;
+  transition: background-color 0.3s ease;
+}
+.dark .hero-3d-zone {
+  border-color: rgba(255, 255, 255, 0.1);
+  /* CAMBIO: COLOR OSCURO AÑADIDO */
+  background-color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .hero-3d-zone {
+    height: 300px;
+  }
+}
+
+/* Forzar visibilidad del canvas frente a Tailwind */
+#container3D canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+.sceneControls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+}
+.sceneControls button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#golCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  background: #000;
+}
